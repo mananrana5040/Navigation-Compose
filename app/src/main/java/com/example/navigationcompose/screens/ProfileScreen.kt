@@ -17,6 +17,11 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.painterResource
+import androidx.compose.ui.semantics.CustomAccessibilityAction
+import androidx.compose.ui.semantics.Role
+import androidx.compose.ui.semantics.customActions
+import androidx.compose.ui.semantics.role
+import androidx.compose.ui.semantics.semantics
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.example.navigationcompose.R
@@ -34,7 +39,7 @@ fun ProfileScreen() {
 
         Image(
             painter = painterResource(id = R.drawable.ic_login),
-            contentDescription = null,
+            contentDescription = "This is the login screen",
             Modifier.size(200.dp)
         )
 
@@ -62,7 +67,7 @@ fun ProfileScreen() {
                     containerColor = Color.Black
                 ), modifier = Modifier.padding(horizontal = 10.dp)
             ) {
-                Text("Sign up")
+                Text(text = "Sign up")
             }
         }
 
